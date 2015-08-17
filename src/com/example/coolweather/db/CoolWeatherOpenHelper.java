@@ -13,19 +13,19 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 			+"province_name text, "
 			+"province_code text)";
 	//table City 
-		private static final String CREATER_CITY="create table CITY("
-				+"id integer primary key autoincrement, "
-				+"city_name text, "
-				+"city_code text, "
-				+"province_id integer)";
-		//table Country
-		private static final String CREATER_COUNTRY="create table COUNTRY("
-				+"id integer primary key autoincrement, "
-				+"country_name text, "
-				+"country_code text, "
-				+"city_id integer)";
-		
-	
+	private static final String CREATER_CITY="create table CITY("
+			+"id integer primary key autoincrement, "
+			+"city_name text, "
+			+"city_code text, "
+			+"province_id integer)";
+	//table Country
+	private static final String CREATER_COUNTRY="create table COUNTRY("
+			+"id integer primary key autoincrement, "
+			+"country_name text, "
+			+"country_code text, "
+			+"city_id integer)";
+
+
 	public CoolWeatherOpenHelper(Context context, String name,
 			CursorFactory factory, int version) {
 		super(context, name, factory, version);
@@ -42,7 +42,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
